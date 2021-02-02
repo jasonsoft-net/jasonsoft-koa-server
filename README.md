@@ -1,6 +1,6 @@
 jasonsoft-koa-server (持续更新中)
 =================
-基于 Node.js 构建完整服务端应用（ Node.js Web API ）
+基于 Node.js 构建完整服务端应用（ Node.js Web API with Koa ）
 
 ### 项目结构
 ```javascript
@@ -16,7 +16,7 @@ jasonsoft-koa-server
 │   │   └── config.prd.js (生产环境配置)
 │   ├── controllers (控制器)
 │   ├── services (服务层-业务逻辑层)
-│   ├── models (数据库实体)
+│   ├── models (数据库实体)
 │   ├── utils (公共方法)
 │   ├── middlewares (中间件)
 │   └── schedules (定时任务)
