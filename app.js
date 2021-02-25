@@ -13,7 +13,7 @@ import Koa from 'koa';
 const app = new Koa();
 
 app.use(async (ctx) => {
-  ctx.body = 'Hello World';
+  ctx.body = 'Hello World!';
 });
 
 /** 监听指定端口，启动服务 */
