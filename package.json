@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "nodemon bin/start.js",
     "lint": "eslint . --ext .js",
-    "autofix": "eslint . --ext .js --fix"
+    "fix": "eslint . --ext .js --fix"
   },
   "repository": {
     "type": "git",
@@ -20,17 +20,25 @@
   },
   "homepage": "https://github.com/JasonSoft-Net/jasonsoft-koa-server#readme",
   "dependencies": {
-    "@babel/register": "^7.12.10",
-    "@babel/runtime": "^7.12.5",
-    "koa": "^2.13.1"
+    "@babel/runtime": "^7.15.4",
+    "@jasonsoft/koa-controller": "^2.0.0",
+    "@koa/router": "^10.1.1",
+    "koa": "^2.13.3"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.10",
-    "@babel/plugin-transform-runtime": "^7.12.10",
-    "@babel/preset-env": "^7.12.11",
-    "eslint": "^7.19.0",
+    "@babel/core": "^7.15.5",
+    "@babel/eslint-parser": "^7.15.7",
+    "@babel/plugin-proposal-class-properties": "^7.14.5",
+    "@babel/plugin-proposal-decorators": "^7.15.4",
+    "@babel/plugin-transform-runtime": "^7.15.0",
+    "@babel/preset-env": "^7.15.6",
+    "@babel/register": "^7.15.3",
+    "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-plugin-import": "^2.22.1",
-    "nodemon": "^2.0.7"
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-prettier": "^4.0.0",
+    "nodemon": "^2.0.13",
+    "prettier": "2.4.1"
   }
 }

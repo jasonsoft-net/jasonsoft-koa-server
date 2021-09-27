@@ -1,22 +1,40 @@
 /**
+ * Example: https://github.com/jasonsoft-net/jasonsoft-koa-server
  * FilePath: /jasonsoft-koa-server/app.js
- * TODO: 初始化相关服务和注入相关中间件
+ * * 初始化相关服务和注入相关中间件
  * Added by Jason.Song (成长的小猪) on 2021/01/31
  * ? CSDN: https://blog.csdn.net/jasonsong2008
- * ? GitHub: https://github.com/JasonSoft-Net
+ * ? GitHub: https://github.com/jasonsoft-net
  */
-
-/** 引入Koa框架 */
 import Koa from 'koa';
+import Router from '@koa/router';
+/**
+ * Import the ControllerProvider from @jasonsoft/koa-controller
+ */
+import { ControllerProvider } from '@jasonsoft/koa-controller';
 
-/** 初始化Koa */
 const app = new Koa();
-
-app.use(async (ctx) => {
-  ctx.body = 'Hello World!';
+const router = new Router();
+/**
+ * Inject the controller directory
+ */
+ControllerProvider.initControllers({
+  router,
+  /** The default directory is './src/controllers' */
+  dir: './app/controllers',
 });
+app.use(router.routes()).use(router.allowedMethods());
 
-/** 监听指定端口，启动服务 */
-app.listen(3000, () => {
-  console.log('[\x1B[36mRunning\x1B[0m] 服务已启动：http://localhost:3000');
+// app.use(async (ctx) => {
+//   ctx.body = 'Hello World!';
+// });
+
+/** Service port */
+const port = Number(process.env.PORT || 3000);
+
+/** Listening port */
+app.listen(port, () => {
+  console.log(
+    `[\x1B[36mRunning\x1B[0m] Application is running on: http://localhost:${port}`,
+  );
 });
