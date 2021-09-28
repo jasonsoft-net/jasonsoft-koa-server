@@ -1,9 +1,12 @@
 /**
+ * Example: https://github.com/jasonsoft-net/jasonsoft-koa-server
+ * FilePath: /jasonsoft-koa-server/app/controllers/user/users.controller.js
  * Import Controller, Get, Post, Put, Delete, Patch, Options, Head, All, etc. decorators
  */
 import {
   Controller,
   Get,
+  Post,
   // Post,
   // Put,
   // Delete,
@@ -43,5 +46,13 @@ export default class UsersController {
   async getUserById(ctx) {
     const { id } = ctx.params;
     return this.users.find((user) => user.id === +id);
+  }
+
+  /**
+   * POST http://localhost:3000/users
+   */
+  @Post()
+  async createUser(ctx) {
+    return { success: true, data: ctx.request.body };
   }
 }
