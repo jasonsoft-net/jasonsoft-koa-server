@@ -24,3 +24,16 @@ jasonsoft-koa-server
 ├── public (静态资源文件)
 └── test (单元测试)
 ```
+
+### Installation
+
+```bash
+$ npm install
+```
+
+### Running the app
+
+```bash
+# development
+$ npm run dev
+```
