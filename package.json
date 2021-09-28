@@ -21,7 +21,7 @@
   "homepage": "https://github.com/JasonSoft-Net/jasonsoft-koa-server#readme",
   "dependencies": {
     "@babel/runtime": "^7.15.4",
-    "@jasonsoft/koa-controller": "^2.0.0",
+    "@jasonsoft/koa-controller": "^2.0.1",
     "@koa/router": "^10.1.1",
     "koa": "^2.13.3"
   },
