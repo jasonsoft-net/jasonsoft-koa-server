@@ -1,7 +1,7 @@
 {
   "name": "jasonsoft-koa-server",
   "version": "1.0.0",
-  "description": "Node.js Web API with Koa, Koa server example",
+  "description": "Koa server example, using ES2015/ES6+ features to develop and run",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon bin/start.js",
