@@ -13,7 +13,7 @@ import {
   // All,
 } from '@jasonsoft/koa-controller';
 
-@Controller('//users//')
+@Controller('users')
 export default class UsersController {
   constructor() {
     this.users = [
@@ -39,7 +39,7 @@ export default class UsersController {
   /**
    * GET http://localhost:3000/users/1
    */
-  @Get('//:id')
+  @Get(':id')
   async getUserById(ctx) {
     const { id } = ctx.params;
     return this.users.find((user) => user.id === +id);
