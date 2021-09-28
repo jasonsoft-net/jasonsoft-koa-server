@@ -1,8 +1,9 @@
-jasonsoft-koa-server (持续更新中)
-=================
-基于 Node.js 构建完整服务端应用（ Node.js Web API with Koa ）🍐
+# jasonsoft-koa-server 🍐
+
+Koa server example, using ES2015/ES6+ features to develop and run
 
 ### 项目结构
+
 ```javascript
 jasonsoft-koa-server
 ├── package.json
