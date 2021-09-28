@@ -13,21 +13,21 @@ import Router from '@koa/router';
  */
 import { ControllerProvider } from '@jasonsoft/koa-controller';
 
+/** Instantiate the Koa object  */
 const app = new Koa();
+
+/** router middleware */
 const router = new Router();
-/**
- * Inject the controller directory
- */
+
+/** Inject the controller directory */
 ControllerProvider.initControllers({
   router,
   /** The default directory is './src/controllers' */
   dir: './app/controllers',
+  /** Whether to enable the body parser, the default setting is false, not enabled */
+  bodyParser: true,
 });
 app.use(router.routes()).use(router.allowedMethods());
-
-// app.use(async (ctx) => {
-//   ctx.body = 'Hello World!';
-// });
 
 /** Service port */
 const port = Number(process.env.PORT || 3000);
